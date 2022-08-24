@@ -1,0 +1,153 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+  width: 380rem;
+  /* justify-content: space-between; */
+}
+
+.logo {
+  margin-left: 2rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  gap: 4rem;
+  color: black;
+  list-style: none;
+  width: 100%;
+  font-size: large;
+  z-index: 100;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.navbar-menu > li:nth-child(3) {
+  right: 2rem;
+  position: absolute;
+}
+
+.btn {
+  width: 5rem;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: block;
+    width: 36rem;
+  }
+  .navbar-menu {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    padding-top: 1rem;
+    margin-left: auto;
+    align-items: flex-start;
+    border-top: 1px solid black;
+  }
+  .navbar-menu > li {
+    background-color: lightcoral;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-menu > li:nth-child(3) {
+    color: white;
+    position: static;
+  }
+
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .hii {
+    display: none;
+  }
+  .navbar-menu1 {
+    display: flex;
+    width: fit-content;
+    color: black;
+    width: 5rem;
+
+    list-style: none;
+    font-size: large;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+}
+
+.list {
+  list-style-type: none;
+  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.items {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  .list {
+    flex-direction: column;
+    height: auto;
+  }
+  .items:nth-child(1) {
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    margin-top: 50px;
+  }
+  .items {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+  .btn {
+    display: block;
+    background: transparent;
+  }
+}
